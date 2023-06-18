@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Welcome back Null.</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body  onload="startTime()">
+<div class="main">
+	<div class="header">
+	<h1 id="time">
+		<script>
+			function startTime() {
+				const today = new Date();
+	 			let h = today.getHours();
+	  			let m = today.getMinutes();
+	  			let s = today.getSeconds();
+	  			m = checkTime(m);
+	  			s = checkTime(s);
+	  			document.getElementById('time').innerHTML =  h + ":" + m + ":" + s;
+	  			setTimeout(startTime, 1000);
+				}
+			function checkTime(i) {
+			  	if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+			  	return i;
+			}
+		</script>
+	</h1>
+	</div>
+	<div class="links">
+		Consoom
+		<ul>
+			<li><a href="https://www.youtube.com">Youtube</a></li>
+			<li><a href="https://www.reddit.com">ew why</a></li>
+			<li><a href="https://twitter.com/home">Twitter</a></li>
+		</ul>
+	</div>
+	<div class="links" style="grid-column-start:2;grid-column-end:3;grid-row-start:2;grid-row-end:4">
+		4chan
+		<ul>
+			<li><a href="https://4chan.org/wg/">/wg/</a></li>
+			<li><a href="https://4chan.org/w/">/w/</a></li>
+			<li><a href="https://4chan.org/g/">/g/</a></li>
+			<li><a href="https://4chan.org/v/">/v/</a></li>
+			<li><a href="https://4chan.org/t/">/t/</a></li>
+			<li><a href="https://4chan.org/mu/">/mu/</a></li>
+			<li><a href="https://4chan.org/b/">/b/</a></li>
+			<li><a href="https://4chan.org/s4s/">[s4s]</a></li>
+		</ul>
+	</div>
+	<div class="links">
+		Yarrr
+		<ul>
+			<li><a href="https://igg-games.com">IGG-GAMES</a></li>
+			<li><a href="https://1337x.to">1337x</a></li>
+			<li><a href="https://1337x.to/user/johncena141//">GNU/Linux Native</a></li>
+		</ul>
+	</div>
+<!--	<div class="links">
+		d-_-b
+		<ul>
+			<li><a href="https://www.last.fm/user/PolPolandino">Last.FM</a></li>
+			<li><a href="http://bandcamp.com">Bandcamp</a></li>
+			<li><a href="https://soundcloud.com/discover">Soundcloud</a></li>
+		</ul>
+</div> -->
+	<div class="footer">
+
+	</div>
+</div>
+</body>
+</html>
